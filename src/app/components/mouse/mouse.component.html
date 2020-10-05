@@ -1,0 +1,11 @@
+<div style="height: 100%">
+    <ng-container *ngTemplateOutlet="template;
+     context: {
+        simpleValue:simpleValue,
+        on:state.on,
+        increment: increment.bind(this),
+        decrement: decrement.bind(this)
+     } ">
+    </ng-container>
+</div>
+
