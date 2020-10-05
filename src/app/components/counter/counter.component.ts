@@ -1,11 +1,10 @@
 import { Component, ContentChild, TemplateRef } from '@angular/core';
 
 @Component({
-    selector: 'app-mouse',
-    templateUrl: './mouse.component.html',
-    styleUrls: ['./mouse.component.css']
+    selector: 'app-counter',
+    templateUrl: './counter.component.html'
 })
-export class MouseComponent {
+export class CounterComponent {
 
     @ContentChild(TemplateRef, {static: false}) template;
 

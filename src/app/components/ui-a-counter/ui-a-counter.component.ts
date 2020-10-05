@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-ui-a-counter',
-  templateUrl: './ui-a-counter.component.html',
-  styleUrls: ['./ui-a-counter.component.css']
+    selector: 'app-ui-a-counter',
+    templateUrl: './ui-a-counter.component.html'
 })
-export class UiACounterComponent implements OnInit {
+export class UiACounterComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+    @Input() simpleValue: number;
+    @Input() on: number;
+    @Input() increment: () => void;
+    @Input() decrement: () => void;
 
 }

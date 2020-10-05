@@ -1,1 +1,16 @@
-<p>ui-b-counter works!</p>
+<h2 style="text-align: center">2. UiBCounterComponent. Another HTML markup and styles but logic identity </h2>
+<div style="display: flex; justify-content: space-evenly">
+    <div style="border: 2px solid black; padding: 10px">
+        <p> Increment counter  {{on * 10}} </p>
+        <button style="background-color: lightblue"
+                (click)="increment()">INC
+        </button>
+    </div>
+
+    <div style="border: 2px solid black; padding: 10px">
+        <p> Decrement counter  {{simpleValue * 10}} </p>
+        <button style="background-color: lightblue"
+                (click)="decrement()">DEC
+        </button>
+    </div>
+</div>

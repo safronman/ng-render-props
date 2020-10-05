@@ -1,35 +1,39 @@
 <h1 style="text-align: center">Render props</h1>
 
 <div>
-    <app-mouse>
+    <app-counter>
         <ng-template let-simpleValue="simpleValue"
                      let-on='on'
                      let-increment='increment'
                      let-decrement='decrement'
         >
-            <h1> Inc count  {{on}} </h1>
-            <button (click)="increment()">INC</button>
-            <hr>
-            <h1> Dec count  {{simpleValue}} </h1>
-            <button (click)="decrement()">DEC</button>
+            <app-ui-a-counter
+                [simpleValue]="simpleValue"
+                [on]="on"
+                [increment]="increment"
+                [decrement]="decrement"
+            >
+            </app-ui-a-counter>
         </ng-template>
-    </app-mouse>
+    </app-counter>
     <hr>
     <hr>
     <hr>
-    <app-mouse>
+    <app-counter>
         <ng-template let-simpleValue="simpleValue"
                      let-on='on'
                      let-increment='increment'
                      let-decrement='decrement'
         >
-            <h1> Inc count  {{on * 10}} </h1>
-            <button (click)="increment()">INC</button>
-            <hr>
-            <h1> Dec count  {{simpleValue * 10}} </h1>
-            <button (click)="decrement()">DEC</button>
+            <app-ui-b-counter
+                [simpleValue]="simpleValue"
+                [on]="on"
+                [increment]="increment"
+                [decrement]="decrement"
+            >
+            </app-ui-b-counter>
         </ng-template>
-    </app-mouse>
+    </app-counter>
 
 
 </div>
