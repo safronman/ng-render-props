@@ -1,38 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { TrackListBTMSTVComponent, TrackListCoreComponent } from './app.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { UiACounterComponent } from './components/ui-a-counter/ui-a-counter.component';
 import { UiBCounterComponent } from './components/ui-b-counter/ui-b-counter.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { PaymentComponent } from './components/payment/payment.component';
-import { ThankYouComponent } from './components/thank-you/thank-you.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material';
 
 @NgModule({
     declarations: [
-        AppComponent,
+        TrackListBTMSTVComponent,
         CounterComponent,
         UiACounterComponent,
         UiBCounterComponent,
         UserInfoComponent,
         PaymentComponent,
-        ThankYouComponent,
+        TrackListCoreComponent
     ],
     imports: [
         BrowserModule,
         NoopAnimationsModule,
-        MatTabsModule
+        MatTabsModule,
     ],
     entryComponents: [
         UserInfoComponent,
         PaymentComponent,
-        ThankYouComponent
+        TrackListBTMSTVComponent,
+
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [TrackListBTMSTVComponent]
 })
 export class AppModule {
 }

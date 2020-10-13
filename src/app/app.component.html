@@ -49,9 +49,12 @@
         <a href="https://angular.io/api/common/NgComponentOutlet#description">official doc</a>
     </li>
 </ul>
-<mat-tab-group>
+<!--<mat-tab-group>
     <mat-tab *ngFor="let tab of dynamicTabs" label="{{tab.label}}">
         <ng-container *ngComponentOutlet="tab.component"></ng-container>
     </mat-tab>
-</mat-tab-group>
+</mat-tab-group>-->
 
+<div *ngFor="let beat of beats">
+    <ng-container *ngComponentOutlet="componentClass; injector: getInjector(beat)" ></ng-container>
+</div>
