@@ -1,4 +1,4 @@
-<h1 style="text-align: center">Render props</h1>
+<h1 style="text-align: center">1. Render props</h1>
 
 <div>
     <app-counter>
@@ -37,3 +37,21 @@
 
 
 </div>
+
+<div style="height: 20px; background-color: green; margin: 50px"></div>
+
+<h1 style="text-align: center">2. NgComponentOutlet</h1>
+<ul>
+    <li>
+        <a href="https://medium.com/@symposia/dynamic-component-rendering-in-angular-5-with-ngcomponentoutlet-410bec3ece75">medium</a>
+    </li>
+    <li>
+        <a href="https://angular.io/api/common/NgComponentOutlet#description">official doc</a>
+    </li>
+</ul>
+<mat-tab-group>
+    <mat-tab *ngFor="let tab of dynamicTabs" label="{{tab.label}}">
+        <ng-container *ngComponentOutlet="tab.component"></ng-container>
+    </mat-tab>
+</mat-tab-group>
+
