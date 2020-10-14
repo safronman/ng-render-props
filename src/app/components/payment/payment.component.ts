@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BeatSettings, BeatSettingsBTMSTV } from 'src/app/settings';
-import { IBeat } from 'src/app/app.component';
+import { IBeat } from '../core-track-list.component';
 
 @Component({
     selector: 'app-payment',
